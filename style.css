@@ -1,0 +1,344 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #4facfe, #00f2fe);
+min-height: 100vh;
+padding: 30px 15px 0;
+color: #222;
+
+display: flex;
+flex-direction: column;
+
+}
+
+.container {
+width: 100%;
+max-width: 900px;
+margin: auto;
+flex: 1;
+}
+
+/* CABEÇALHO */
+
+header {
+text-align: center;
+color: white;
+margin-bottom: 25px;
+}
+
+header h1 {
+font-size: 38px;
+margin-bottom: 8px;
+}
+
+header p {
+font-size: 17px;
+}
+
+/* PESQUISA */
+
+.pesquisa-container {
+position: relative;
+margin-bottom: 20px;
+}
+
+.pesquisa {
+display: flex;
+gap: 10px;
+}
+
+.pesquisa input {
+flex: 1;
+padding: 15px;
+border: none;
+border-radius: 10px;
+font-size: 16px;
+outline: none;
+}
+
+.pesquisa button {
+padding: 15px 25px;
+border: none;
+border-radius: 10px;
+background: #222;
+color: white;
+cursor: pointer;
+font-size: 16px;
+}
+
+.pesquisa button {
+background: #444;
+}
+
+/* SUGESTÕES */
+
+.sugestoes {
+position: absolute;
+top: 60px;
+left: 0;
+right: 110px;
+
+background: white;
+border-radius: 0 0 10px 10px;
+
+overflow: hidden;
+
+z-index: 1000;
+
+box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+.sugestao {
+padding: 12px 15px;
+cursor: pointer;
+border-bottom: 1px solid #eee;
+}
+
+.sugestao {
+background: #f1f1f1;
+}
+
+.sugestao strong {
+color: #222;
+}
+
+.sugestao small {
+display: block;
+color: #777;
+margin-top: 3px;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+text-align: center;
+color: white;
+margin: 15px;
+font-weight: bold;
+}
+
+/* CLIMA */
+
+.clima {
+background: rgba(255, 255, 255, 0.95);
+border-radius: 20px;
+padding: 25px;
+
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+margin-bottom: 30px;
+
+}
+
+/* PRINCIPAL */
+
+.principal {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+margin-bottom: 25px;
+
+}
+
+.principal h2 {
+font-size: 30px;
+margin-bottom: 5px;
+}
+
+#data {
+color: #777;
+}
+
+.temperatura {
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.temperatura span {
+font-size: 45px;
+}
+
+.temperatura strong {
+font-size: 60px;
+}
+
+#descricao {
+color: #555;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+
+margin-bottom: 30px;
+
+}
+
+.card {
+background: #f3f7fa;
+
+border-radius: 15px;
+
+padding: 20px;
+
+text-align: center;
+
+}
+
+.card span {
+font-size: 30px;
+}
+
+.card p {
+margin: 8px 0;
+
+color: #666;
+
+}
+
+.card strong {
+font-size: 20px;
+}
+
+/* PREVISÃO */
+
+.titulo-previsao {
+margin-bottom: 15px;
+}
+
+.previsao {
+display: grid;
+
+grid-template-columns: repeat(5, 1fr);
+
+gap: 10px;
+
+}
+
+.dia {
+background: #f3f7fa;
+
+padding: 15px 8px;
+
+text-align: center;
+
+border-radius: 12px;
+
+}
+
+.dia strong {
+display: block;
+
+margin-bottom: 10px;
+
+}
+
+.dia .icone {
+font-size: 30px;
+
+margin: 10px 0;
+
+}
+
+.dia .max {
+font-weight: bold;
+}
+
+.dia .min {
+color: #777;
+
+margin-top: 5px;
+
+}
+
+/* RODAPÉ */
+
+footer {
+width: 100%;
+
+text-align: center;
+
+color: white;
+
+padding: 25px 15px;
+
+margin-top: auto;
+
+border-top: 1px solid rgba(255,255,255,0.3);
+
+}
+
+footer p {
+margin: 5px 0;
+}
+
+footer strong {
+color: white;
+}
+
+.tecnologias {
+font-size: 13px;
+
+opacity: 0.8;
+
+margin-top: 10px;
+
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+body {
+    padding-top: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+.principal {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 15px;
+}
+
+.informacoes {
+    grid-template-columns: 1fr;
+}
+
+.previsao {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pesquisa {
+    flex-direction: column;
+}
+
+.pesquisa button {
+    width: 100%;
+}
+
+.sugestoes {
+    right: 0;
+    top: 105px;
+}
+
+.temperatura strong {
+    font-size: 50px;
+}
+
+}

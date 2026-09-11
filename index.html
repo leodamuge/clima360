@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Clima360</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <header>
+        <h1>🌤️ Clima360</h1>
+        <p>Consulte o clima da sua cidade</p>
+    </header>
+
+    <!-- Pesquisa -->
+    <div class="pesquisa-container">
+
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                id="cidade"
+                placeholder="Digite o nome da cidade..."
+                autocomplete="off"
+            >
+
+            <button onclick="buscarClima()">
+                Pesquisar
+            </button>
+
+        </div>
+
+        <!-- Sugestões -->
+        <div id="sugestoes" class="sugestoes"></div>
+
+    </div>
+
+    <div id="mensagem"></div>
+
+    <!-- Clima -->
+    <section id="clima" class="clima" style="display: none;">
+
+        <div class="principal">
+
+            <div>
+                <h2 id="nomeCidade">Maputo</h2>
+                <p id="data"></p>
+            </div>
+
+            <div class="temperatura">
+
+                <span id="icone">☀️</span>
+
+                <strong id="temperatura">--</strong>
+
+                <span>°C</span>
+
+            </div>
+
+            <p id="descricao">---</p>
+
+        </div>
+
+        <!-- Informações -->
+        <div class="informacoes">
+
+            <div class="card">
+
+                <span>🌡️</span>
+
+                <p>Sensação</p>
+
+                <strong id="sensacao">
+                    -- °C
+                </strong>
+
+            </div>
+
+            <div class="card">
+
+                <span>💧</span>
+
+                <p>Humidade</p>
+
+                <strong id="humidade">
+                    --%
+                </strong>
+
+            </div>
+
+            <div class="card">
+
+                <span>💨</span>
+
+                <p>Vento</p>
+
+                <strong id="vento">
+                    -- km/h
+                </strong>
+
+            </div>
+
+        </div>
+
+        <!-- Previsão -->
+        <h2 class="titulo-previsao">
+            Previsão dos próximos dias
+        </h2>
+
+        <div id="previsao" class="previsao"></div>
+
+    </section>
+
+</div>
+
+<!-- Rodapé -->
+<footer>
+
+    <p>
+        © 2026 <strong>Clima360</strong>
+    </p>
+
+    <p>
+        Desenvolvido por
+        <strong>Damuge Leonardo</strong>
+    </p>
+
+
+</footer>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
